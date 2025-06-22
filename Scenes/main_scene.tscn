@@ -84,6 +84,7 @@ shape = SubResource("RectangleShape2D_qyde3")
 offset_top = -7.0
 offset_right = 420.0
 offset_bottom = 13.0
+metadata/_edit_use_anchors_ = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="StaticBody2D/StaticBody2D"]
 position = Vector2(0, 167)
@@ -96,6 +97,7 @@ shape = SubResource("RectangleShape2D_qyde3")
 offset_top = -7.0
 offset_right = 420.0
 offset_bottom = 13.0
+metadata/_edit_use_anchors_ = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="StaticBody2D/StaticBody2D/StaticBody2D"]
 position = Vector2(0, 167)

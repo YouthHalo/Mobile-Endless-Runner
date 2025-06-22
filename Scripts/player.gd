@@ -6,7 +6,7 @@ func _ready() -> void:
 	pass
 
 func movement(delta: float) -> void:
-		# Add the gravity.
+		# Add the gravity.	
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 

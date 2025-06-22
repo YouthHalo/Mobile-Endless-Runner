@@ -11,7 +11,9 @@ func _ready() -> void:
 func window_size_changed():
 	if window.size.x > 320 or window.size.y > 180 or DisplayServer.WINDOW_MODE_MAXIMIZED: #it crashes otherwise
 		var scale: Vector2i = window.size / base_size
-		window.content_scale_size = window.size / (scale.y if scale.y <= scale.x else scale.x)
-
+		var min_scale = min(scale.x, scale.y)
+		if min_scale > 0:
+			window.content_scale_size = window.size / min_scale # Prevent divide by zero
+	
 ## The whole point of this code is to integer scale properly without black borders
 ## The default Godot 4.3 Implementation does not have this
